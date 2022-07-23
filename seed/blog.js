@@ -53,9 +53,42 @@ const main = async () => {
   })
   await amsterdam.save()
   console.log('Created some cities!')
+  const comments = [
+    {
+      name: 'James',
+      city: madrid._id,
+      comment: 'A must is also a rooftop bar like Azotea del Círculo'
+    },
+    {
+      name: 'Allie',
+      city: london._id,
+      comment: 'Thanks for the list! I will definitely have to check it out.'
+    },
+    {
+      name: 'Melissa',
+      city: paris._id,
+      comment: "Can't forget Notre-Dame!"
+    },
+    {
+      name: 'Chris',
+      city: barcelona._id,
+      comment: 'Thanks so much! So excited to visit in April.'
+    },
+    {
+      name: 'Will',
+      city: lisbon._id,
+      comment: 'Lison is the best city. Love the people, food, and culture.'
+    },
+    {
+      name: 'Katie',
+      city: amsterdam._id,
+      comment: 'The cruise on the canal is the best!!!'
+    }
+  ]
 }
 const run = async () => {
   await main()
+  db.dropDatabase()
   db.close()
 }
 
