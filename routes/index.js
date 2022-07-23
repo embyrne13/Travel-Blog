@@ -3,22 +3,24 @@ const router = Router()
 const Content = require('../models/content')
 const Comment = require('../models/comment')
 
-// router.get('/', (req, res) => res.send('This is root!'))
+router.get('/', (req, res) => res.send('This is root!'))
+
 router.get('/content', async (req, res) => {
   const contents = await Content.find({})
   res.json(contents)
 })
-// router.get('/content/:id', async (req, res) => {
-//   try {
-//     const { id } = req.params
-//     const content = await Content.findById(id)
-//     if (!content) throw Error('Comment not found')
-//     res.json(content)
-//   } catch (e) {
-//     console.log(e)
-//     res.send('Comment not found!')
-//   }
-// })
+
+router.get('/content/:id', async (req, res) => {
+  try {
+    const { id } = req.params
+    const content = await Content.findById(id)
+    if (!content) throw Error('Comment not found')
+    res.json(content)
+  } catch (e) {
+    console.log(e)
+    res.send('Comment not found!')
+  }
+})
 // router.get('/comment', async (req, res) => {
 //   const comments = await Comment.find({})
 //   res.json(comments)
