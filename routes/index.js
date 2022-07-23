@@ -39,19 +39,19 @@ router.get('/comment/:id', async (req, res) => {
     res.send('Comment not found!')
   }
 })
-// router.post('/comment/:id', async (req, res) => {
-//   try {
-//     const comment = await new Comment(req.body)
-//     await comment.save()
-//     return res.status(201).json({
-//       comment
-//     })
-//   } catch (error) {
-//     return res.status(500).json({ error: error.message })
-//   }
-// // })
-// router.put('/comment/:id', controllers.updateComment)
-// router.delete('/comment/:id', controllers.deleteComment)
+router.post('/comment/:id', async (req, res) => {
+  try {
+    const comment = await new Comment(req.body)
+    await comment.save()
+    return res.status(201).json({
+      comment
+    })
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
+})
+router.put('/comment/:id', controllers.updateComment)
+router.delete('/comment/:id', controllers.deleteComment)
 router.post('/form', async (req, res) => {
   try {
     const form = await new Form(req.body)
