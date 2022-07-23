@@ -7,7 +7,8 @@ const main = async () => {
   const madrid = await new Content({
     name: 'Madrid',
     description: 'BEST',
-    image: 'https://media.timeout.com/images/101551169/750/562/image.jpg'
+    image:
+      'https://theculturetrip.com/wp-content/uploads/2017/02/cibeles-palace-one-of-the-symbols-of-the-city-of-madrid.jpg'
   })
   await madrid.save()
   const lisbon = await new Content({
