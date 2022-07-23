@@ -10,4 +10,4 @@ const contentSchema = new Schema(
   { timestamps: true }
 )
 
-module.exports = contentSchema
+module.exports = mongoose.model('contents', contentSchema)

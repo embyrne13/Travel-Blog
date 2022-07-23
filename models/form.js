@@ -10,5 +10,4 @@ const formSchema = new Schema(
   },
   { timestamps: true }
 )
-
-module.exports = formSchema
+module.exports = mongoose.model('form', formSchema)

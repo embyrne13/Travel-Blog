@@ -1,13 +1,13 @@
 const { Router } = require('express')
 const router = Router()
-const Content = require('../models/content.js')
-const Comment = require('../models/comment.js')
+const Content = require('../models/content')
+const Comment = require('../models/comment')
 
-router.get('/', (req, res) => res.send('This is root!'))
-// router.get('/content', async (req, res) => {
-//   const contents = await Content.find({})
-//   res.json(contents)
-// })
+// router.get('/', (req, res) => res.send('This is root!'))
+router.get('/content', async (req, res) => {
+  const contents = await Content.find({})
+  res.json(contents)
+})
 // router.get('/content/:id', async (req, res) => {
 //   try {
 //     const { id } = req.params
@@ -21,7 +21,7 @@ router.get('/', (req, res) => res.send('This is root!'))
 // })
 // router.get('/comment', async (req, res) => {
 //   const comments = await Comment.find({})
-//   res.json(reviews)
+//   res.json(comments)
 // })
 
 // router.get('/comment/:id', async (req, res) => {
