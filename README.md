@@ -37,7 +37,7 @@ Welcome to my Travel Blog! You will be able to view 6 of my favorite cities I've
 ### **_Screenshots_**
 
 ![Component Hierarchy Diagram](images/chd.jpg)
-![Entity Relationship Diagram](images/erd.jpg)
+![Entity Relationship Diagram](images/ERD.jpg)
 ![]()
 ![]()
 
