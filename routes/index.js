@@ -2,6 +2,7 @@ const { Router } = require('express')
 const router = Router()
 const Content = require('../models/content')
 const Comment = require('../models/comment')
+const Form = require('../models/form')
 const controllers = require('../controllers')
 
 router.get('/', (req, res) => res.send('This is root!'))
@@ -51,4 +52,15 @@ router.get('/comment/:id', async (req, res) => {
 // // })
 // router.put('/comment/:id', controllers.updateComment)
 // router.delete('/comment/:id', controllers.deleteComment)
+router.post('/form', async (req, res) => {
+  try {
+    const form = await new Form(req.body)
+    await form.save()
+    return res.status(201).json({
+      form
+    })
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
+})
 module.exports = router
