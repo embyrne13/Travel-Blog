@@ -10,5 +10,5 @@ const Content = mongoose.model('Content', contentSchema)
 module.exports = {
   Comment,
   Content
-  // Form
+  Form
 }
