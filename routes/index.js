@@ -2,6 +2,7 @@ const { Router } = require('express')
 const router = Router()
 const Content = require('../models/content')
 const Comment = require('../models/comment')
+const controllers = require('../controllers')
 
 router.get('/', (req, res) => res.send('This is root!'))
 
@@ -21,22 +22,22 @@ router.get('/content/:id', async (req, res) => {
     res.send('Comment not found!')
   }
 })
-// router.get('/comment', async (req, res) => {
-//   const comments = await Comment.find({})
-//   res.json(comments)
-// })
+router.get('/comment', async (req, res) => {
+  const comments = await Comment.find({})
+  res.json(comments)
+})
 
-// router.get('/comment/:id', async (req, res) => {
-//   try {
-//     const { id } = req.params
-//     const comment = await Comment.find({ content: id })
-//     if (!comment) throw Error('Comment not found')
-//     res.json(comment)
-//   } catch (e) {
-//     console.log(e)
-//     res.send('Comment not found!')
-//   }
-// })
+router.get('/comment/:id', async (req, res) => {
+  try {
+    const { id } = req.params
+    const comment = await Comment.find({ content: id })
+    if (!comment) throw Error('Comment not found')
+    res.json(comment)
+  } catch (e) {
+    console.log(e)
+    res.send('Comment not found!')
+  }
+})
 // router.post('/comment/:id', async (req, res) => {
 //   try {
 //     const comment = await new Comment(req.body)
@@ -47,6 +48,7 @@ router.get('/content/:id', async (req, res) => {
 //   } catch (error) {
 //     return res.status(500).json({ error: error.message })
 //   }
-// })
-
+// // })
+// router.put('/comment/:id', controllers.updateComment)
+// router.delete('/comment/:id', controllers.deleteComment)
 module.exports = router

@@ -85,10 +85,11 @@ const main = async () => {
       comment: 'The cruise on the canal is the best!!!'
     }
   ]
+  await Comment.insertMany(comments)
 }
 const run = async () => {
-  await main()
   db.dropDatabase()
+  await main()
   db.close()
 }
 
