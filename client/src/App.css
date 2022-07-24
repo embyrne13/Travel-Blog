@@ -30,8 +30,8 @@ a {
   display: block;
 }
 .intro {
-  color: rgb(21, 197, 179);
-  text-shadow: 1.3px 1.3px rgb(133, 163, 224);
+  color: rgb(241 134 111);
+  text-shadow: 1.3px 1.3px rgb(149, 171, 215);
   width: 30vw;
   height: 50vh;
   padding-left: 80px;
