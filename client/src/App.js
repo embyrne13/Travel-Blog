@@ -5,6 +5,7 @@ import Header from './components/Header'
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import AboutMe from './components/AboutMe'
 
 const App = () => {
   const [content, setContent] = useState([])
@@ -21,7 +22,8 @@ const App = () => {
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<Home content={content} />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/aboutme" element={<AboutMe />} />
         </Routes>
       </main>
     </div>
