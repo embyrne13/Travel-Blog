@@ -6,7 +6,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 3em;
+  height: 1em;
   font-size: 30px;
   font-weight: bold;
 }
@@ -21,12 +21,28 @@ a {
   text-align: center;
   display: flex;
   justify-content: center;
-  height: 77vh;
 }
 .para {
   border-radius: 40%;
-  height: 77vh;
+  height: 79vh;
 }
 .parag {
   display: block;
+}
+.intro {
+  color: rgb(21, 197, 179);
+  text-shadow: 1.3px 1.3px rgb(133, 163, 224);
+  width: 30vw;
+  height: 50vh;
+  padding-left: 80px;
+  padding-top: 200px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+  background-image: url('https://i.pinimg.com/736x/d6/59/08/d659088b8fc4159da000df192ebede9c.jpg');
+  background-size: cover;
+  height: 93vh;
 }
