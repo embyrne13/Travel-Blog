@@ -11,20 +11,21 @@ nav {
   font-weight: bold;
 }
 a {
-  color: rgb(21, 197, 179);
+  color: rgb(18 102 204);
 }
 .aboutme {
-  color: rgb(61 162 203);
-  text-shadow: 1.3px 1.3px rgb(133, 163, 224);
-  font-size: 20px;
-  padding: 22px;
+  font-family: 'Delius', cursive;
+  color: rgb(69, 161, 197);
+  text-shadow: 1.3px 1.3px rgb(35, 82, 176);
+  font-size: 21px;
+  padding: 11px;
   text-align: center;
   display: flex;
   justify-content: center;
 }
 .para {
   border-radius: 40%;
-  height: 79vh;
+  height: 75vh;
 }
 .parag {
   display: block;
@@ -35,11 +36,13 @@ a {
   width: 30vw;
   height: 50vh;
   padding-left: 80px;
-  padding-top: 200px;
+  padding-top: 181px;
   font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  font-family: 'Delius', cursive;
 }
 .form {
   background-image: url('https://i.pinimg.com/736x/d6/59/08/d659088b8fc4159da000df192ebede9c.jpg');
