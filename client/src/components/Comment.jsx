@@ -50,7 +50,7 @@ const Comment = (props) => {
             {comment.name}
           </h2>
           <h2>Comment: {comment.comment}</h2>
-          <button onClick={updateComment}>Edit </button>
+          {/* <button onClick={}>Edit </button> */}
           <button onClick={() => deleteComment(comment._id)}>Delete </button>
         </div>
       ))}
