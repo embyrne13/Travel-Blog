@@ -1,24 +1,22 @@
-// import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
-// const Cities = () => {
-//   let navigate = useNavigate()
+const Cities = (props) => {
+  let navigate = useNavigate()
+  const showCity = (content) => {
+    navigate(`${content._id}`)
+  }
+  return (
+    <div className="cities">
+      {props.content.map((content) => (
+        <div key={props.name} onClick={() => showCity(content)}>
+          <div className="city info">
+            <h2>{content.description}</h2>
+            <img src={content.image} alt="City" />
+          </div>
+        </div>
+      ))}
+    </div>
+  )
+}
 
-//   const showCity = (content) => {
-//     navigate(`${Content._id}`)
-//   }
-
-//   return (
-//     <div className="cities">
-//       {Content.map((content) => (
-//         <div key={Content.name} onClick={() => showCity(content)}>
-//           <div className="city info">
-//             <h2>{Content.description}</h2>
-//             <img src={Content.image} alt="Theme-Park" />
-//           </div>
-//         </div>
-//       ))}
-//     </div>
-//   )
-// }
-
-// export default Cities
+export default Cities

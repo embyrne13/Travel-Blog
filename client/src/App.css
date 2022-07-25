@@ -49,3 +49,6 @@ a {
   background-size: cover;
   height: 93vh;
 }
+.City {
+  border-radius: 40%;
+}
