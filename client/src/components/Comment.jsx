@@ -24,6 +24,8 @@ const Comment = (props) => {
       comment: comment
     })
     getComment()
+    setName('')
+    setComment('')
   }
 
   const [upc, setUpc] = useState({})

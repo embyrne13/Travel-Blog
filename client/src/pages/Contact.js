@@ -4,10 +4,14 @@ import ContactMe from '../components/ContactMe'
 
 const Form = () => {
   const [form, setForm] = useState([])
-
-  const getForm = async () => {
-    const res = await axios.post('http://localhost:3001/api/form')
-    setForm(res.data)
+  const [name, setName] = useState('')
+  const [comment, setComment] = useState('')
+  const getForm = async (props) => {
+    const res = await axios.post('http://localhost:3001/api/form' + props.id, {
+      name: name,
+      city: props.id,
+      comment: comment
+    })
   }
 
   useEffect(() => {
