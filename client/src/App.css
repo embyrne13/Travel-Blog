@@ -36,26 +36,38 @@ a {
   width: 30vw;
   height: 50vh;
   padding-left: 80px;
-  padding-top: 181px;
-  font-size: 20px;
+  padding-top: 151px;
+  font-size: 33px;
   display: flex;
   justify-content: center;
   align-items: center;
-
   font-family: 'Delius', cursive;
 }
-.form {
+.formsub {
   background-image: url('https://i.pinimg.com/736x/d6/59/08/d659088b8fc4159da000df192ebede9c.jpg');
   background-size: cover;
-  height: 93vh;
+  height: 100vh;
 }
-.cityimage {
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.city {
   border-radius: 60%;
 }
-.cityname {
-  color: blue;
+.des {
+  font-family: 'Delius', cursive;
+  color: rgb(69, 161, 197);
+  text-shadow: 1.3px 1.3px rgb(35, 82, 176);
+  font-size: 33px;
+  padding: 14px;
+  text-align: center;
 }
-.cityinfo {
+.cityname {
+  color: rgb(45, 45, 180);
+  text-align: center;
+}
+.main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
