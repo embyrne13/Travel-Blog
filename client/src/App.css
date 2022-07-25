@@ -49,6 +49,14 @@ a {
   background-size: cover;
   height: 93vh;
 }
-.City {
-  border-radius: 40%;
+.cityimage {
+  border-radius: 60%;
+}
+.cityname {
+  color: blue;
+}
+.cityinfo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

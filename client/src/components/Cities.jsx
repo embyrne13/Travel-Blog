@@ -9,9 +9,13 @@ const Cities = (props) => {
     <div className="cities">
       {props.content.map((content) => (
         <div key={props.name} onClick={() => showCity(content)}>
-          <div className="city info">
-            <h2>{content.description}</h2>
-            <img src={content.image} alt="City" />
+          <div className="cityinfo">
+            <div className="cityname">
+              <h2>{content.name}</h2>
+              <div className="cityimage">
+                <img src={content.image} alt="City" />
+              </div>
+            </div>
           </div>
         </div>
       ))}
