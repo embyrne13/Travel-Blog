@@ -52,6 +52,7 @@ const Comment = (props) => {
                 placeholder={'name'}
               />
               <input
+                className="comment"
                 type="text"
                 value={comment}
                 onChange={(e) => setComment(e.target.value)}
@@ -59,7 +60,7 @@ const Comment = (props) => {
                 placeholder={'comment'}
               />
             </div>
-            <button id="form-submit">Submit</button>
+            <button className="form-submit">Submit</button>
           </form>
         </div>
       </div>

@@ -40,6 +40,7 @@ const Contact = (props) => {
             placeholder={'subject'}
           />
           <input
+            className="message"
             type="text"
             value={props.message}
             onChange={props.handleChange}
