@@ -31,7 +31,7 @@ const Comment = (props) => {
     getComment(event.target.value)
   }
   return (
-    <div>
+    <div className="fo">
       {getc?.map((comment) => (
         <Edit
           comment={comment}
@@ -39,8 +39,8 @@ const Comment = (props) => {
           onChange={handleChange}
         />
       ))}
-      <div className="form">
-        <h1>Add A Comment</h1>
+      <div className="comform">
+        <h1 className="add">Add A Comment</h1>
         <div className="input-div">
           <form onSubmit={addComment}>
             <div className="name-comment">

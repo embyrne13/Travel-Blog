@@ -13,7 +13,7 @@ const Cities = (props) => {
             <div className="cityinfo">
               <img src={content.image} className="cityimage" alt="city" />
               <div className="cityname">
-                <h2>{content.name}</h2>
+                <h2 className="cityname">{content.name}</h2>
               </div>
             </div>
           </div>

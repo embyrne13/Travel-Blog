@@ -15,7 +15,7 @@ const City = () => {
   }, [])
 
   return (
-    <div>
+    <div className="rev">
       <div className="des">{city.description}</div>
       <div className="Comment">{<Comment />}</div>
     </div>

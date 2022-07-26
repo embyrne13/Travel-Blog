@@ -1,12 +1,12 @@
 const AboutMe = () => {
   return (
     <div className="aboutme">
-      <h1>
+      <h1 className="hello">
         So happy you're here! Let me tell you a little bit about myself. My name
-        is Emily. I am a New York native and I LOVE to travel. I spent a year
-        and a half living in Spain where I got to immerse in the culture and
-        travel throughout Europe. I have been to 17 countries so far and hope to
-        get to many more soon. My next planned trip is to Peru!
+        is Emily. I am a New York native and I love to travel. I spent a year
+        and a half living in Spain where I immersed in the culture and travelled
+        throughout Europe. I have been to 17 countries so far and hope to get to
+        many more soon. My next planned trip is to Peru!
       </h1>
       <h3 className="parag">
         <img

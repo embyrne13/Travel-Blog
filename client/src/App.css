@@ -2,7 +2,7 @@
 nav {
   font-family: 'Delius', cursive;
   width: 95vw;
-  text-shadow: 2px 2px rgb(133, 163, 224);
+  text-shadow: 1px 1px rgb(241 134 111);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -11,21 +11,39 @@ nav {
   font-weight: bold;
 }
 a {
-  color: rgb(159 219 238);
+  color: rgb(157 220 236);
+}
+.title {
+  text-align: center;
+  font-family: 'Delius', cursive;
+  color: rgb(241 134 111);
+  text-shadow: 1.3px 1.6px rgb(69, 161, 197);
+  font-size: 55px;
+  background-color: rgb(159 219 238);
+  padding: 0px;
+  margin-top: 2px;
 }
 .aboutme {
+  background-image: url('https://i.pinimg.com/736x/d6/59/08/d659088b8fc4159da000df192ebede9c.jpg');
+  background-size: cover;
+  height: 100vh;
+  margin-top: 20px;
   font-family: 'Delius', cursive;
   color: rgb(69, 161, 197);
   text-shadow: 1.3px 1.3px rgb(35, 82, 176);
   font-size: 20px;
-  padding: 14px;
   text-align: center;
   display: flex;
   justify-content: center;
 }
 .para {
-  border-radius: 40%;
-  height: 75vh;
+  height: 80vh;
+  width: 50vw;
+  margin-top: 70px;
+  margin-right: 70px;
+  border: 5px solid rgb(241 134 111);
+  display: flex;
+  justify-content: flex-end;
 }
 .parag {
   display: block;
@@ -35,14 +53,15 @@ a {
   text-shadow: 1.3px 1.3px rgb(149, 171, 215);
   width: 30vw;
   height: 50vh;
-  padding-left: 80px;
-  padding-top: 151px;
+  padding-left: 72px;
+  padding-top: 60px;
   font-size: 33px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Delius', cursive;
 }
+
 .formsub {
   background-image: url('https://i.pinimg.com/736x/d6/59/08/d659088b8fc4159da000df192ebede9c.jpg');
   background-size: cover;
@@ -53,6 +72,14 @@ a {
   display: flex;
   flex-direction: column;
   width: 40vw;
+  border: 5px solid rgb(241 134 111);
+  border-style: dotted;
+  font-family: 'Delius', cursive;
+  color: rgb(241 134 111);
+  text-shadow: 1.3px 1.6px rgb(69, 161, 197);
+  font-size: 33px;
+  display: flex;
+  justify-content: center;
 }
 .message {
   height: 13vh;
@@ -63,26 +90,26 @@ a {
 .city {
   border-radius: 60%;
 }
+.cities {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 h2 {
   font-family: Arial, Helvetica, sans-serif;
-  color: rgb(35, 82, 176);
+  color: rgb(241 134 111);
   text-shadow: 1.3px 1.3px rgb(69, 161, 197);
   font-size: 23px;
   padding: 14px;
 }
-h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(5, 35, 95);
-  text-shadow: 1.3px 1.6px rgb(69, 161, 197);
-  font-size: 39px;
-  padding-top: 55px;
-  display: flex;
-  justify-content: center;
-}
+
 button {
   font-size: 17px;
   margin: 5px;
-  color: rgb(5, 35, 95);
+  color: rgb(241 134 111);
+  border: 2px solid grey;
+  border-radius: 10rem;
   background-color: white;
   font-style: bold;
   font-family: Arial, Helvetica, sans-serif;
@@ -100,6 +127,9 @@ button:hover {
   text-align: center;
   margin: 20px;
 }
+.rev {
+  /* background-color: rgb(219, 163, 151); */
+}
 .cityname {
   color: rgb(45, 45, 180);
   text-align: center;
@@ -113,6 +143,7 @@ button:hover {
   border-radius: 50%;
   height: 333px;
   width: 333px;
+  margin: 30px;
 }
 .cityimage:hover {
   cursor: pointer;
@@ -123,16 +154,43 @@ button:hover {
 }
 .commentinfo {
   margin-top: 50px;
-  border: 1px solid rgb(45, 45, 180);
+  border: 1px solid rgb(241 134 111);
   width: 50vw;
-  background-color: rgb(173, 221, 240);
+  background-color: rgb(191, 224, 236);
 }
 input[type='text'] {
-  font-size: 24px;
+  font-size: 22px;
 }
 .name-comment {
-  margin-left: 50px;
   display: flex;
   flex-direction: column;
   width: 40vw;
+}
+.send {
+  width: 11vw;
+  height: 5vh;
+  border: 2px solid grey;
+}
+.comform {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(241 134 111);
+  text-shadow: 1.3px 1.3px rgb(69, 161, 197);
+  font-size: 23px;
+  display: flex;
+  flex-direction: column;
+  border: 5px solid rgb(241 134 111);
+  border-style: dotted;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.form-submit {
+  width: 7vw;
+  font-size: 20px;
+}
+.fo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

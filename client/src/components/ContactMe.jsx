@@ -47,7 +47,7 @@ const Contact = (props) => {
             name={'message'}
             placeholder={'message'}
           />
-          <button>Send Message</button>
+          <button className="send">Send Message</button>
         </form>
       </div>
     </div>
