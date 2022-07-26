@@ -9,17 +9,13 @@ export default function Edit(props) {
   const [comment, setComment] = useState(props.comment.comment)
   let { id } = useParams()
   const [getc, setGetc] = useState(null)
-  // useEffect(() => {
-  //   setName(props.comment.name)
-  //   setComment(props.comment.comment)
-  // }, [])
   const toggleActive = () => {
     setIsFormActive(!isFormActive)
   }
 
   const [upc, setUpc] = useState({})
   const updateComment = async (e) => {
-    e.preventDefault()
+    // e.preventDefault()
     const res = await axios.put(
       `http://localhost:3001/api/comment/${props.comment._id}`,
       {
@@ -28,6 +24,7 @@ export default function Edit(props) {
         city: id
       }
     )
+    setUpc(res.data)
     props.getComment()
   }
   const [delc, setDelc] = useState({})
@@ -57,11 +54,9 @@ export default function Edit(props) {
               name={'comment'}
               placeholder={'comment'}
             />
-            {
-              <button type="submit" id="editsubmit">
-                Submit
-              </button>
-            }
+            <button type="submit" onClick={props.getComment}>
+              Submit
+            </button>
           </form>
         </div>
       ) : (
@@ -69,10 +64,8 @@ export default function Edit(props) {
           <div className="commentinfo">
             <h2>Name: {props.comment.name}</h2>
             <h2>Comment: {props.comment.comment}</h2>
-            <button onClick={toggleActive}>Edit </button>
-            <button onClick={() => deleteComment(props.comment._id)}>
-              Delete
-            </button>
+            <button onClick={toggleActive}> 📝 </button>
+            <button onClick={() => deleteComment(props.comment._id)}>❌</button>
           </div>
         </div>
       )}

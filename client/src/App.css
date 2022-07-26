@@ -17,7 +17,7 @@ nav {
 }
 a {
   color: rgb(157 220 236);
-  padding: 17px;
+  padding: 22px;
 }
 .title {
   /* background-image: url('https://lh3.googleusercontent.com/xZJYsNunhxhtUSGp9CAlAPl4-t9j-a-OQpgZf27Vlko9xMf43zDUBykdcyG9ByFh8834Ic-hPYqqS92zQnRZBcd9b84GZPQ76RrU9qAInz0kf2IojxXtNHvNji9cV_ceioCTiFRIg2U=w2400') */
@@ -109,7 +109,7 @@ h2 {
   color: rgb(241 134 111);
   text-shadow: 1.3px 1.3px rgb(69, 161, 197);
   font-size: 23px;
-  padding: 14px;
+  padding-left: 5px;
 }
 
 button {
@@ -176,7 +176,7 @@ button:hover {
   margin-top: 50px;
   border: 1px solid rgb(241 134 111);
   width: 50vw;
-  background-color: rgb(191, 224, 236);
+  background-color: white;
 }
 input[type='text'] {
   font-size: 22px;
@@ -191,6 +191,7 @@ input[type='text'] {
   width: 11vw;
   height: 5vh;
   border: 2px solid grey;
+  font-weight: 500;
 }
 .comform {
   font-family: Arial, Helvetica, sans-serif;
@@ -214,4 +215,10 @@ input[type='text'] {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.rev {
+  background-color: rgb(201, 227, 237);
+}
+.add {
+  font-family: 'Delius', cursive;
 }
