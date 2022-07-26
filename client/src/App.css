@@ -7,8 +7,9 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 1em;
-  font-size: 30px;
+  font-size: 22px;
   font-weight: bold;
+  padding-top: 10px;
 }
 a {
   color: rgb(157 220 236);
@@ -20,8 +21,8 @@ a {
   text-shadow: 1.3px 1.6px rgb(69, 161, 197);
   font-size: 55px;
   background-color: rgb(159 219 238);
-  padding: 0px;
-  margin-top: 2px;
+  padding: 3px;
+  margin: 9px;
 }
 .aboutme {
   background-image: url('https://i.pinimg.com/736x/d6/59/08/d659088b8fc4159da000df192ebede9c.jpg');
@@ -127,12 +128,12 @@ button:hover {
   text-align: center;
   margin: 20px;
 }
-.rev {
-  /* background-color: rgb(219, 163, 151); */
-}
+
 .cityname {
   color: rgb(45, 45, 180);
   text-align: center;
+  padding: 0;
+  margin: 0;
 }
 .main {
   display: flex;
@@ -144,9 +145,21 @@ button:hover {
   height: 333px;
   width: 333px;
   margin: 30px;
+  filter: brightness(100%);
+}
+.hello {
+  color: rgb(241 134 111);
+  text-shadow: 1.3px 1.3px rgb(149, 171, 215);
+  margin-left: 33px;
+  font-size: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Delius', cursive;
 }
 .cityimage:hover {
   cursor: pointer;
+  filter: brightness(50%);
 }
 .display {
   display: flex;
@@ -160,6 +173,7 @@ button:hover {
 }
 input[type='text'] {
   font-size: 22px;
+  color: rgb(241 134 111);
 }
 .name-comment {
   display: flex;
