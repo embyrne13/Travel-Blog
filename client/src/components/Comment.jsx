@@ -5,9 +5,9 @@ import { useParams } from 'react-router-dom'
 import Edit from './Edit'
 
 const Comment = (props) => {
+  const [getc, setGetc] = useState(null)
   const [namevalue, setName] = useState('')
   const [comment, setComment] = useState('')
-  const [getc, setGetc] = useState(null)
   let { id } = useParams()
   const getComment = async () => {
     const res = await axios.get(`http://localhost:3001/api/comment/${id}`)
@@ -27,17 +27,10 @@ const Comment = (props) => {
     setName('')
     setComment('')
   }
-  const handleChange = (event) => {
-    getComment(event.target.value)
-  }
   return (
     <div className="fo">
       {getc?.map((comment) => (
-        <Edit
-          comment={comment}
-          getComment={getComment}
-          onChange={handleChange}
-        />
+        <Edit comment={comment} getComment={getComment} />
       ))}
       <div className="comform">
         <h1 className="add">Add A Comment</h1>

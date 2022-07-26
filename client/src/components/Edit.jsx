@@ -3,24 +3,31 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
-export default function Banana(props) {
+export default function Edit(props) {
   const [isFormActive, setIsFormActive] = useState(false)
-  const [namevalue, setName] = useState('')
-  const [comment, setComment] = useState('')
+  const [namevalue, setName] = useState(props.comment.name)
+  const [comment, setComment] = useState(props.comment.comment)
   let { id } = useParams()
   const [getc, setGetc] = useState(null)
-  useEffect(() => {
-    setName(props.comment.name)
-    setComment(props.comment.comment)
-  }, [])
+  // useEffect(() => {
+  //   setName(props.comment.name)
+  //   setComment(props.comment.comment)
+  // }, [])
   const toggleActive = () => {
     setIsFormActive(!isFormActive)
   }
 
   const [upc, setUpc] = useState({})
-  const updateComment = async (comment) => {
-    const res = await axios.put(`http://localhost:3001/api/comment/${comment}`)
-    setUpc(res.data)
+  const updateComment = async (e) => {
+    e.preventDefault()
+    const res = await axios.put(
+      `http://localhost:3001/api/comment/${props.comment._id}`,
+      {
+        name: namevalue,
+        comment: comment,
+        city: id
+      }
+    )
     props.getComment()
   }
   const [delc, setDelc] = useState({})
@@ -35,18 +42,18 @@ export default function Banana(props) {
     <div>
       {isFormActive ? (
         <div>
-          <form className="edit">
+          <form className="edit" onSubmit={updateComment}>
             <textarea
               type="text"
               value={namevalue}
-              onChange={(e) => setUpc(e.target.value)}
+              onChange={(e) => setName(e.target.value)}
               name={'name'}
               placeholder={'name'}
             />
             <textarea
               type="text"
               value={comment}
-              onChange={(e) => setUpc(e.target.value)}
+              onChange={(e) => setComment(e.target.value)}
               name={'comment'}
               placeholder={'comment'}
             />
