@@ -49,8 +49,10 @@ a {
   height: 100vh;
 }
 .form {
+  margin-left: 50px;
   display: flex;
   flex-direction: column;
+  width: 40vw;
 }
 .city {
   border-radius: 60%;
@@ -70,8 +72,10 @@ h1 {
   padding-top: 55px;
 }
 button {
+  font-size: 17px;
+  margin: 5px;
   color: rgb(5, 35, 95);
-  background-color: rgb(185, 220, 233);
+  background-color: rgb(223, 240, 247);
   font-style: bold;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -82,6 +86,7 @@ button {
   font-size: 44px;
   padding-top: 44px;
   text-align: center;
+  margin: 20px;
 }
 .cityname {
   color: rgb(45, 45, 180);
@@ -97,7 +102,29 @@ button {
   height: 333px;
   width: 333px;
 }
+.cityimage:hover {
+  cursor: pointer;
+}
+button:hover {
+  background-color: white;
+  cursor: pointer;
+}
 .display {
   display: flex;
   flex-wrap: wrap;
+}
+.commentinfo {
+  margin-top: 50px;
+  border: 1px solid rgb(45, 45, 180);
+  width: 50vw;
+  background-color: rgb(173, 221, 240);
+}
+input[type='text'] {
+  font-size: 24px;
+}
+.name-comment {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
 }

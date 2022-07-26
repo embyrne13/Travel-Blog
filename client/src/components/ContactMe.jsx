@@ -16,8 +16,8 @@ const Contact = (props) => {
         wish is my command! I will do my best to create one based on your
         request!
       </h1>
-      <div className="form">
-        <form onSubmit={handleSubmit}>
+      <div>
+        <form className="form" onSubmit={handleSubmit}>
           <input
             type="text"
             value={props.name}

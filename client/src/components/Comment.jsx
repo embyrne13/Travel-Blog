@@ -27,11 +27,17 @@ const Comment = (props) => {
     setName('')
     setComment('')
   }
-
+  const handleChange = (event) => {
+    getComment(event.target.value)
+  }
   return (
     <div>
       {getc?.map((comment) => (
-        <Edit comment={comment} getComment={getComment} />
+        <Edit
+          comment={comment}
+          getComment={getComment}
+          onChange={handleChange}
+        />
       ))}
       <div className="form">
         <h1>Add A Comment</h1>

@@ -55,15 +55,12 @@ export default function Banana(props) {
                 Submit
               </button>
             }
-          </form>{' '}
+          </form>
         </div>
       ) : (
         <div>
           <div className="commentinfo">
-            <h2>
-              Name:
-              {props.comment.name}
-            </h2>
+            <h2>Name: {props.comment.name}</h2>
             <h2>Comment: {props.comment.comment}</h2>
             <button onClick={toggleActive}>Edit </button>
             <button onClick={() => deleteComment(props.comment._id)}>

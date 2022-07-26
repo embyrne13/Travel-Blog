@@ -6,7 +6,6 @@ import React from 'react'
 import AboutMe from './components/AboutMe'
 import ContactMe from './components/ContactMe'
 import City from './components/City'
-import Comment from './components/Comment'
 const App = () => {
   return (
     <div className="page">
