@@ -13,7 +13,6 @@ const Form = () => {
       comment: comment
     })
   }
-
   useEffect(() => {
     getForm()
   }, [])

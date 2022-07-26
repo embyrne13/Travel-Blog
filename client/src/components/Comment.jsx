@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import Edit from './Edit'
 
 const Comment = (props) => {
   const [namevalue, setName] = useState('')
@@ -15,7 +16,6 @@ const Comment = (props) => {
   useEffect(() => {
     getComment()
   }, [])
-
   const addComment = async (e) => {
     e.preventDefault()
     await axios.post(`http://localhost:3001/api/comment/${id}`, {
@@ -28,33 +28,10 @@ const Comment = (props) => {
     setComment('')
   }
 
-  const [upc, setUpc] = useState({})
-  const updateComment = async (comment) => {
-    const res = await axios.put(`http://localhost:3001/api/comment/${comment}`)
-    setUpc(res.data)
-    getComment()
-  }
-  const [delc, setDelc] = useState({})
-  const deleteComment = async (comment) => {
-    const res = await axios.delete(
-      `http://localhost:3001/api/comment/${comment}`
-    )
-    setDelc(res.data)
-    getComment()
-  }
-
   return (
     <div>
       {getc?.map((comment) => (
-        <div className="commentinfo">
-          <h2>
-            Name:
-            {comment.name}
-          </h2>
-          <h2>Comment: {comment.comment}</h2>
-          <button onClick={updateComment}>Edit </button>
-          <button onClick={() => deleteComment(comment._id)}>Delete </button>
-        </div>
+        <Edit comment={comment} getComment={getComment} />
       ))}
       <div className="form">
         <h1>Add A Comment</h1>
