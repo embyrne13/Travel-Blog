@@ -6,6 +6,7 @@ import React from 'react'
 import AboutMe from './components/AboutMe'
 import ContactMe from './components/ContactMe'
 import City from './components/City'
+import Footer from './components/Footer'
 const App = () => {
   return (
     <div className="page">
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/:id" element={<City />} />
         </Routes>
       </main>
+      <Footer />
     </div>
   )
 }

@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+@keyframes autofill {
+  0%,
+  100% {
+    color: rgb(241 134 111);
+    background: transparent;
+  }
+}
 body {
   margin: 0;
 }
 nav {
-  font-family: 'Delius', cursive;
+  font-family: 'Roboto Slab', serif;
   width: 95vw;
-  text-shadow: 1.5px 1.5px rgb(241 134 111);
+  text-shadow: 1.3px 1.3px rgb(241 134 111);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,41 +23,68 @@ nav {
   padding-top: 10px;
   -webkit-text-stroke-width: 1px;
 }
+header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.yo {
+  padding: 39px;
+}
 a {
-  color: rgb(157 220 236);
-  padding: 22px;
+  color: rgb(77 188 238);
+  display: flex;
+  justify-content: center;
+}
+a:hover {
+  text-decoration: none;
+  color: rgb(241 134 111);
+  text-shadow: rgb(69, 161, 197);
+}
+a:link {
+  text-decoration: none;
+  color: rgb(241 134 111);
+  text-shadow: rgb(69, 161, 197);
 }
 .title {
-  /* background-image: url('https://lh3.googleusercontent.com/xZJYsNunhxhtUSGp9CAlAPl4-t9j-a-OQpgZf27Vlko9xMf43zDUBykdcyG9ByFh8834Ic-hPYqqS92zQnRZBcd9b84GZPQ76RrU9qAInz0kf2IojxXtNHvNji9cV_ceioCTiFRIg2U=w2400') */
   text-align: center;
-  font-family: 'Delius', cursive;
+  font-family: 'Roboto Slab', serif;
   color: rgb(241 134 111);
   -webkit-text-stroke-width: 3px;
-  /* text-shadow: 1.3px 1.6px rgb(69, 161, 197); */
   font-size: 55px;
   background-color: rgb(159 219 238);
   padding: 3px;
   margin: 9px;
+  width: 100vw;
 }
 .aboutme {
   background-image: url('https://i.pinimg.com/736x/d6/59/08/d659088b8fc4159da000df192ebede9c.jpg');
   background-size: cover;
   height: 100vh;
   margin-top: 20px;
-  font-family: 'Delius', cursive;
+  font-family: 'Roboto Slab', serif;
   color: rgb(69, 161, 197);
   text-shadow: 1.3px 1.3px rgb(35, 82, 176);
-  font-size: 20px;
   text-align: center;
   display: flex;
   justify-content: center;
 }
 .para {
-  height: 80vh;
-  width: 50vw;
-  margin-top: 70px;
-  margin-right: 70px;
-  border: 5px solid rgb(241 134 111);
+  height: 82vh;
+  width: 60vw;
+  margin-top: 83px;
+  margin-right: 83px;
+  border: 10px solid rgb(241 134 111);
   display: flex;
   justify-content: flex-end;
 }
@@ -58,39 +93,47 @@ a {
 }
 .intro {
   color: rgb(241 134 111);
-  text-shadow: 1.3px 1.3px rgb(149, 171, 215);
+  text-shadow: 1.5px 1.5px rgb(149, 171, 215);
   width: 30vw;
   height: 50vh;
   padding-left: 72px;
-  padding-top: 60px;
+  padding-top: 72px;
   font-size: 33px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Delius', cursive;
+  font-family: 'Roboto Slab', serif;
+  font-style: bold;
 }
 
 .formsub {
   background-image: url('https://i.pinimg.com/736x/d6/59/08/d659088b8fc4159da000df192ebede9c.jpg');
   background-size: cover;
-  height: 100vh;
 }
 .form {
+  margin-top: 30px;
   margin-left: 50px;
   display: flex;
   flex-direction: column;
   width: 40vw;
   border: 5px solid rgb(241 134 111);
   border-style: dotted;
-  font-family: 'Delius', cursive;
+  font-family: 'Roboto Slab', serif;
   color: rgb(241 134 111);
   text-shadow: 1.3px 1.6px rgb(69, 161, 197);
   font-size: 33px;
   display: flex;
   justify-content: center;
 }
+.formcolor {
+  color: rgb(69, 161, 197);
+}
+.formcolor:autofill {
+  color: rgb(69, 161, 197);
+}
 .message {
   height: 13vh;
+  color: rgb(69, 161, 197);
 }
 .comment {
   height: 13vh;
@@ -104,14 +147,14 @@ a {
   flex-wrap: wrap;
   justify-content: center;
 }
-h2 {
-  font-family: Arial, Helvetica, sans-serif;
+.card {
+  width: fit-content;
+  background-color: rgb(159 219 238);
   color: rgb(241 134 111);
-  text-shadow: 1.3px 1.3px rgb(69, 161, 197);
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 23px;
-  padding-left: 5px;
+  margin: 5px;
 }
-
 button {
   font-size: 17px;
   margin: 5px;
@@ -127,17 +170,27 @@ button:hover {
   cursor: pointer;
 }
 .des {
-  font-family: 'Delius', cursive;
-  color: rgb(69, 161, 197);
+  font-family: 'Roboto Slab', serif;
+  color: rgb(241 134 111);
+  text-shadow: 1.3px 1.3px rgb(35, 82, 176);
+  font-size: 27px;
+  text-align: center;
+  margin: 10px;
+}
+.des1 {
+  font-family: 'Roboto Slab', serif;
+  color: rgb(241 134 111);
   text-shadow: 1.3px 1.3px rgb(35, 82, 176);
   font-size: 44px;
-  padding-top: 44px;
+  padding-top: 50px;
+  padding-bottom: 20px;
   text-align: center;
-  margin: 20px;
 }
 
 .cityname {
-  color: rgb(45, 45, 180);
+  font-family: 'Roboto Slab', serif;
+  font-weight: bolder;
+  color: rgb(241 134 111);
   text-align: center;
   padding: 0;
   margin: 0;
@@ -152,34 +205,40 @@ button:hover {
   height: 333px;
   width: 333px;
   margin: 30px;
+  filter: brightness(77%);
+}
+.cityimage:hover {
+  cursor: pointer;
   filter: brightness(100%);
 }
 .hello {
   color: rgb(241 134 111);
-  text-shadow: 1.3px 1.3px rgb(149, 171, 215);
-  margin-left: 33px;
-  font-size: 33px;
+  text-shadow: 2px 2px rgb(159 219 238);
+  padding-top: 151px;
+  padding-right: 33px;
+  padding-bottom: 111px;
+  padding-left: 77px;
+  font-size: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Delius', cursive;
+  font-family: 'Roboto Slab', serif;
 }
-.cityimage:hover {
-  cursor: pointer;
-  filter: brightness(50%);
-}
+
 .display {
   display: flex;
   flex-wrap: wrap;
 }
 .commentinfo {
-  margin-top: 50px;
-  border: 1px solid rgb(241 134 111);
+  margin-top: 10px;
+  border: 5px solid rgb(241 134 111);
   width: 50vw;
-  background-color: white;
+  background-color: rgb(159 219 238);
 }
 input[type='text'] {
   font-size: 22px;
+}
+input:-webkit-autofill {
   color: rgb(241 134 111);
 }
 .name-comment {
@@ -190,8 +249,9 @@ input[type='text'] {
 .send {
   width: 11vw;
   height: 5vh;
-  border: 2px solid grey;
-  font-weight: 500;
+  border: 2px solid rgb(241 134 111);
+  font-weight: 900;
+  font-family: 'Roboto Slab', serif;
 }
 .comform {
   font-family: Arial, Helvetica, sans-serif;
@@ -201,14 +261,22 @@ input[type='text'] {
   display: flex;
   flex-direction: column;
   border: 5px solid rgb(241 134 111);
-  border-style: dotted;
-  margin-top: 50px;
+  margin-top: 10px;
   justify-content: center;
   align-items: center;
+  background-color: rgb(159 219 238);
+  width: 50vw;
+}
+.name {
+  color: rgb(241 134 111);
+}
+.comment {
+  color: rgb(241 134 111);
 }
 .form-submit {
   width: 7vw;
   font-size: 20px;
+  margin-top: 13px;
 }
 .fo {
   display: flex;
@@ -217,8 +285,13 @@ input[type='text'] {
   align-items: center;
 }
 .rev {
-  background-color: rgb(201, 227, 237);
+  background-color: white;
 }
 .add {
-  font-family: 'Delius', cursive;
+  font-family: 'Roboto Slab', serif;
+}
+.edittext {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(241 134 111);
+  font-size: 20px;
 }

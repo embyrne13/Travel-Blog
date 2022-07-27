@@ -19,6 +19,7 @@ const Contact = (props) => {
       <div>
         <form className="form" onSubmit={handleSubmit}>
           <input
+            className="formcolor"
             type="text"
             value={props.name}
             onChange={props.handleChange}
@@ -26,6 +27,7 @@ const Contact = (props) => {
             placeholder={'name'}
           />
           <input
+            className="formcolor"
             type="text"
             value={props.email}
             onChange={props.handleChange}
@@ -33,6 +35,7 @@ const Contact = (props) => {
             placeholder={'email'}
           />
           <input
+            className="formcolor"
             type="text"
             value={props.subject}
             onChange={props.handleChange}

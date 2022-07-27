@@ -41,6 +41,7 @@ export default function Edit(props) {
         <div>
           <form className="edit" onSubmit={updateComment}>
             <textarea
+              className="edittext"
               type="text"
               value={namevalue}
               onChange={(e) => setName(e.target.value)}
@@ -48,6 +49,7 @@ export default function Edit(props) {
               placeholder={'name'}
             />
             <textarea
+              className="edittext"
               type="text"
               value={comment}
               onChange={(e) => setComment(e.target.value)}
@@ -62,10 +64,10 @@ export default function Edit(props) {
       ) : (
         <div>
           <div className="commentinfo">
-            <h2>Name: {props.comment.name}</h2>
-            <h2>Comment: {props.comment.comment}</h2>
-            <button onClick={toggleActive}> 📝 </button>
-            <button onClick={() => deleteComment(props.comment._id)}>❌</button>
+            <h2 className="card">Name: {props.comment.name}</h2>
+            <h2 className="card">Comment: {props.comment.comment}</h2>
+            <button onClick={toggleActive}> ✏️</button>
+            <button onClick={() => deleteComment(props.comment._id)}>🗑️</button>
           </div>
         </div>
       )}
