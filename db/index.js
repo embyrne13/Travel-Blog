@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 
 let dbUrl = process.env.MONGODB_URI
+console.log(dbUrl)
 // === 'production'
 // ? process.env.MONGODB_URI
 // : 'mongodb://127.0.0.1:27017/<database_name>'
