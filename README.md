@@ -24,7 +24,7 @@
 - VSCode
 - [Trello](https://trello.com/b/o8rZxOOq/travel-blog)
 
-## ---### **_Overview_**
+##### **_Overview_**
 
 Welcome to my Travel page! You will be able to view 6 of my favorite cities I've been to. You can see photos and read all about what to do when you visit each city. You can leave a review on my blog posts and also contact me by filling out a form.
 
