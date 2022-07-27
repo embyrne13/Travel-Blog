@@ -7,7 +7,7 @@ const Form = () => {
   const [name, setName] = useState('')
   const [comment, setComment] = useState('')
   const getForm = async (props) => {
-    const res = await axios.post('http://localhost:3001/api/form' + props.id, {
+    const res = await axios.post('/api/form' + props.id, {
       name: name,
       city: props.id,
       comment: comment

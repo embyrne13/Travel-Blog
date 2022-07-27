@@ -15,22 +15,17 @@ export default function Edit(props) {
 
   const [upc, setUpc] = useState({})
   const updateComment = async (e) => {
-    const res = await axios.put(
-      `http://localhost:3001/api/comment/${props.comment._id}`,
-      {
-        name: namevalue,
-        comment: comment,
-        city: id
-      }
-    )
+    const res = await axios.put(`/api/comment/${props.comment._id}`, {
+      name: namevalue,
+      comment: comment,
+      city: id
+    })
     setUpc(res.data)
     props.getComment()
   }
   const [delc, setDelc] = useState({})
   const deleteComment = async (comment) => {
-    const res = await axios.delete(
-      `http://localhost:3001/api/comment/${comment}`
-    )
+    const res = await axios.delete(`/api/comment/${comment}`)
     setDelc(res.data)
     props.getComment()
   }

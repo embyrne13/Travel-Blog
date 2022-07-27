@@ -6,7 +6,7 @@ const Home = () => {
 
   useEffect(() => {
     const getContent = async () => {
-      const response = await axios.get('http://localhost:3001/api/content')
+      const response = await axios.get('/api/content')
       setContent(response.data)
     }
     getContent()
