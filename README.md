@@ -30,10 +30,11 @@ Welcome to my Travel page! You will be able to view 6 of my favorite cities I've
 
 ### **_Screenshots_**
 
+![Home page](Travelhome.jpg)
+![Form page](Travelform.jpg)
+![Info page](Travellist.jpg)
 ![Component Hierarchy Diagram](images/chd.jpg)
 ![Entity Relationship Diagram](images/erd.jpg)
-![]()
-![]()
 
 ---
 
