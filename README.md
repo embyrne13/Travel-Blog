@@ -67,3 +67,4 @@ Welcome to my Travel page! You will be able to view 6 of my favorite cities I've
 
 - Connect to instagram
 - Create more blogposts
+- User authentication
