@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-// const url = require('../components/Travel.jpg')
 
 const Header = () => {
   return (
