@@ -177,6 +177,15 @@ button:hover {
   text-align: center;
   margin: 10px;
 }
+.des11 {
+  font-family: 'Roboto Slab', serif;
+  color: rgb(241 134 111);
+  text-shadow: 1.3px 1.3px rgb(35, 82, 176);
+  font-size: 27px;
+  text-align: center;
+  margin: 10px;
+  padding-bottom: 30px;
+}
 .des1 {
   font-family: 'Roboto Slab', serif;
   color: rgb(241 134 111);

@@ -15,7 +15,6 @@ export default function Edit(props) {
 
   const [upc, setUpc] = useState({})
   const updateComment = async (e) => {
-    // e.preventDefault()
     const res = await axios.put(
       `http://localhost:3001/api/comment/${props.comment._id}`,
       {

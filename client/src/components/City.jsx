@@ -23,6 +23,10 @@ const City = () => {
       <div className="des">{city.description5}</div>
       <div className="des">{city.description6}</div>
       <div className="des">{city.description7}</div>
+      <div className="des">{city.description8}</div>
+      <div className="des">{city.description9}</div>
+      <div className="des">{city.description10}</div>
+      <div className="des11">{city.description11}</div>
       <div className="Comment">{<Comment />}</div>
     </div>
   )
