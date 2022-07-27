@@ -6,7 +6,7 @@ const City = () => {
   let { id } = useParams()
   const [city, setCity] = useState({})
   const getCity = async () => {
-    const res = await axios.get(`http://localhost:3001/api/content/${id}`)
+    const res = await axios.get(`/api/content/${id}`)
     setCity(res.data)
   }
 

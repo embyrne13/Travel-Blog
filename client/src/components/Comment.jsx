@@ -10,7 +10,7 @@ const Comment = (props) => {
   const [comment, setComment] = useState('')
   let { id } = useParams()
   const getComment = async () => {
-    const res = await axios.get(`http://localhost:3001/api/comment/${id}`)
+    const res = await axios.get(`/api/comment/${id}`)
     setGetc(res.data)
   }
   useEffect(() => {
@@ -18,7 +18,7 @@ const Comment = (props) => {
   }, [])
   const addComment = async (e) => {
     e.preventDefault()
-    await axios.post(`http://localhost:3001/api/comment/${id}`, {
+    await axios.post(`/api/comment/${id}`, {
       name: namevalue,
       city: id,
       comment: comment
