@@ -31,7 +31,7 @@ router.get('/comment', async (req, res) => {
 router.get('/comment/:id', async (req, res) => {
   try {
     const { id } = req.params
-    const comment = await Comment.find({ content: id })
+    const comment = await Comment.find({ city: id })
     if (!comment) throw Error('Comment not found')
     res.json(comment)
   } catch (e) {

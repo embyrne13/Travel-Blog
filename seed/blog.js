@@ -1,53 +1,117 @@
 const db = require('../db')
-const { Content, Comment } = require('../models')
+const Comment = require('../models/comment')
+const Content = require('../models/content')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
+  Comment.collection.drop()
+  Content.collection.drop()
   const madrid = await new Content({
-    name: 'Madrid',
-    description:
-      'MADRID 🇪🇸 Go to a Real Madrid Fútbol game at Santiago Bernabeu Stadium 🇪🇸 Visit the Museo Nacional del Prado 🇪🇸 Eat at the Mercado de San Miguel 🇪🇸 Rent a row boat at Parque del Retiro 🇪🇸 Take a tour of the Royal Palace 🇪🇸 Shop around in Sol',
+    name: 'MADRID',
+    description1: 'TOP 10 THINGS TO DO IN MADRID',
+    description2:
+      '🇪🇸 Go to a Real Madrid Fútbol game at Santiago Bernabeu Stadium',
+    description3: '🇪🇸 Visit the Museo Nacional del Prado',
+    description4: '🇪🇸 Eat at the Mercado de San Miguel',
+    description5: '🇪🇸 Rent a row boat at Parque del Retiro',
+    description6: '🇪🇸 Take a tour of the Royal Palace',
+    description7: '🇪🇸 Shop around in Sol',
+    description8: '🇪🇸 Enjoy a picnic in Parque del Retiro',
+    description9: '🇪🇸 Go to the Temple of Debod for sunset',
+    description10:
+      '🇪🇸 Take a tour of Palacio Real de Madrid and Santa María la Real de La Almudena',
+    description11: '🇪🇸 Thrift shop through Malasaña',
     image:
       'https://theculturetrip.com/wp-content/uploads/2017/02/cibeles-palace-one-of-the-symbols-of-the-city-of-madrid.jpg'
   })
   await madrid.save()
   const lisbon = await new Content({
-    name: 'Lisbon',
-    description:
-      'LISBON 🇵🇹 Take a day trip to Sintra to explore Peña Palace 🇵🇹 Ride a tram through the city 🇵🇹 Book a wine tour of the Douro Valley 🇵🇹 Visit the National Azulejo Museum 🇵🇹 Wait on line at Pasteis de Belem for the best pasties de nata 🇵🇹 Stop by the Belem Tower',
+    name: 'LISBON',
+    description1: 'TOP 10 THINGS TO DO IN LISBON',
+    description2: '🇵🇹 Take a day trip to Sintra to explore Peña Palace',
+    description3: '🇵🇹 Ride a tram through the city',
+    description4: '🇵🇹 Book a wine tour of the Douro Valley',
+    description5: '🇵🇹 Visit the National Azulejo Museum ',
+    description6:
+      '🇵🇹 Wait on line at Pasteis de Belem for the best pasties de nata',
+    description7: '🇵🇹 Stop by the Belem Tower',
+    description8: '🇵🇹 Sit in Rosso Square',
+    description9: '🇵🇹 Shop around the Praca de Comercio',
+    description10:
+      '🇵🇹 Take the Santa Justa elevator to the top for amazing views',
+    description11: '🇵🇹 Walk up to the Alfama District',
     image:
       'https://afar-production.imgix.net/uploads/images/post_images/images/lBwKh4NcNJ/original_open-uri20130227-3596-nnqtp9?1383805514?ixlib=rails-0.3.0&auto=format%2Ccompress&crop=entropy&fit=crop&h=719&q=80&w=954'
   })
   await lisbon.save()
   const london = await new Content({
-    name: 'London',
-    description:
-      'LONDON 🇬🇧 Walk by Big Ben and the Houses of Parliament 🇬🇧 Visit the Tate Museum 🇬🇧 Eat at Borough Market 🇬🇧 Enjoy high tea at Harrods 🇬🇧 See a Broadway show 🇬🇧 Watch the changing of the guards at Buckingham Palace',
+    name: 'LONDON',
+    description1: 'TOP 10 THINGS TO DO IN LONDON',
+    description2: '🇬🇧 Walk by Big Ben and the Houses of Parliament ',
+    description3: '🇬🇧 Visit Westminster Abbey',
+    description4: '🇬🇧 Eat at Borough Market',
+    description5: '🇬🇧 Enjoy high tea at Harrods',
+    description6: '🇬🇧 See a Broadway show ',
+    description7: '🇬🇧 Watch the changing of the guards at Buckingham Palace',
+    description8: '🇬🇧 Take photos of the colorful homes in Notting Hill',
+    description9: '🇬🇧 Stroll through Hyde Park',
+    description10:
+      '🇬🇧 Get tickets to the Tower of London and see the Crown Jewels',
+    description11: '🇬🇧 Shop for vintage clothes in the Camden Market',
     image:
-      'https://upload.wikimedia.org/wikipedia/commons/9/93/Clock_Tower_-_Palace_of_Westminster%2C_London_-_May_2007.jpg'
+      'https://img.freepik.com/premium-photo/big-ben-clock-tower-london-bus_79295-6753.jpg?w=2000'
   })
   await london.save()
   const barcelona = await new Content({
-    name: 'Barcelona',
-    description:
-      'BARCELONA 🇪🇸 Walk through the Gothic Quarter 🇪🇸 Visit Gaudi Park Guell or Casa Milá 🇪🇸 Take a tour of La Sagrada Familia 🇪🇸 Shop around Las Ramblas 🇪🇸 Eat at La Boqueria 🇪🇸 Drink sangria by the beach',
+    name: 'BARCELONA',
+    description1: 'TOP 10 THINGS TO DO IN BARCELONA',
+    description2: '🇪🇸 Walk through the Gothic Quarter',
+    description3: '🇪🇸 Visit Gaudi Park Guell or Casa Milá',
+    description4: '🇪🇸 Take a tour of La Sagrada Familia ',
+    description5: '🇪🇸 Shop around Las Ramblas ',
+    description6: '🇪🇸 Eat at La Boqueria',
+    description7: '🇪🇸 Drink sangria by the beach',
+    description8: '🇪🇸 Stroll through the Plaza de Catalunya',
+    description9: '🇪🇸 Stop by the Picasso Museum',
+    description10: '🇪🇸 Visit the Barcelona City History Museum',
+    description11: '🇪🇸 Go to a FC Barcelona game at Camp Nou',
     image:
       'https://lp-cms-production.imgix.net/2019-06/8ae1c56041e64517e29372a889f1beb7-la-sagrada-familia.jpg'
   })
   await barcelona.save()
   const paris = await new Content({
-    name: 'Paris',
-    description:
-      'PARIS 🇫🇷 Picnic nearby the Eiffel Tower 🇫🇷 Take a river boat on the Seine 🇫🇷 Visit the Arc de Triomphe 🇫🇷 Indulge in croissants everyday 🇫🇷 Take a tour of Versailles 🇫🇷 Stroll through the Louvre and check out the Mona Lisa',
+    name: 'PARIS',
+    description1: 'TOP 10 THINGS TO DO IN PARIS',
+    description2: '🇫🇷 Picnic nearby the Eiffel Tower',
+    description3: '🇫🇷 Take a river boat on the Seine',
+    description4: '🇫🇷 Visit the Arc de Triomphe',
+    description5: '🇫🇷 Indulge in croissants everyday at a Parisian Cafe',
+    description6: '🇫🇷 Take a tour of Versailles',
+    description7: '🇫🇷 Stroll through the Louvre and check out the Mona Lisa',
+    description8:
+      '🇫🇷 Walk across Pont Notre-Dame and enjoy the breathtaking views',
+    description9:
+      '🇫🇷 Make sure to check out Marché aux Puces de Clignancour flea market',
+    description10: '🇫🇷 Visit the Luxemburg Gardens',
+    description11: "🇫🇷 Take a tour of Musée d'Orsay",
     image:
       'https://cdn.britannica.com/54/75854-050-E27E66C0/Eiffel-Tower-Paris.jpg'
   })
   await paris.save()
   const amsterdam = await new Content({
-    name: 'Amsterdam',
-    description:
-      'AMSTERDAM 🇳🇱 Ride a bike through the city 🇳🇱 Visit the Anne Frank House 🇳🇱 Take a tour of the Van Gogh Museum 🇳🇱 Book a Canal Cruise 🇳🇱 Drink beer at the Heineken Experience 🇳🇱 Eat stroopwaffels from a local Farmers Market',
+    name: 'AMSTERDAM',
+    description1: 'TOP 10 THINGS TO DO IN AMSTERDAM',
+    description2: '🇳🇱 Ride a bike through the city',
+    description3: '🇳🇱 Book a Canal Cruise',
+    description4: '🇳🇱 Visit the Anne Frank House',
+    description5: '🇳🇱 Take a tour of the Van Gogh Museum',
+    description6: '🇳🇱 Drink beer at the Heineken Experience',
+    description7: '🇳🇱 Eat stroopwaffels from a local Farmers Market',
+    description8: '🇳🇱 Pop into the Cheese Museum',
+    description9: '🇳🇱 Walk around Rijksmuseum',
+    description10: '🇳🇱 Go on a food tour',
+    description11: '🇳🇱 Enjoy the Heineken Experience',
     image:
       'https://www.travelandleisure.com/thmb/qI_QQdbY_6YNhxXNXGgeT3EhjkU=/1200x1200/smart/filters:no_upscale()/amsterdam-nl-AMSTERDAMTG0521-6d2bfaac29704667a950bcf219680640.jpg'
   })
@@ -67,7 +131,7 @@ const main = async () => {
     {
       name: 'Melissa',
       city: paris._id,
-      comment: "Can't forget Notre-Dame!"
+      comment: "Can't forget Sacré Coeur!"
     },
     {
       name: 'Chris',
@@ -88,7 +152,6 @@ const main = async () => {
   await Comment.insertMany(comments)
 }
 const run = async () => {
-  db.dropDatabase()
   await main()
   db.close()
 }

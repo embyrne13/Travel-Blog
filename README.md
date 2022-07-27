@@ -16,28 +16,22 @@
 
 ### **_Technologies_**
 
-- React.js
-- Express
-- Mongodb
-- Node.js
+![MERN](https://miro.medium.com/max/815/0*PatkATBDaRl9ygN0)
+
 - CSS
 - Javascript
 - GitHub
 - VSCode
 - [Trello](https://trello.com/b/o8rZxOOq/travel-blog)
 
----
+## ---### **_Overview_**
 
-### **_Overview_**
-
----
-
-Welcome to my Travel Blog! You will be able to view 6 of my favorite cities I've been to. You can see photos and read all about what to do when you visit each city. You can leave a review on my blog posts and also contact me by filling out a form.
+Welcome to my Travel page! You will be able to view 6 of my favorite cities I've been to. You can see photos and read all about what to do when you visit each city. You can leave a review on my blog posts and also contact me by filling out a form.
 
 ### **_Screenshots_**
 
 ![Component Hierarchy Diagram](images/chd.jpg)
-![Entity Relationship Diagram](images/ERD.jpg)
+![Entity Relationship Diagram](images/erd.jpg)
 ![]()
 ![]()
 
@@ -45,17 +39,17 @@ Welcome to my Travel Blog! You will be able to view 6 of my favorite cities I've
 
 ### **_Future Updates_**
 
-- [] Create backend folders
-- [] Set up Schemas
-- [] Set up Links
-- [] Connect to database
-- [] Have 2 successful servers
-- [] Create Home page
-- [] Create About Me page
-- [] Create Contact Me page
-- [] Style with CSS
-- [] Create country information
-- [] Create contact submission form
+- [x] Create backend folders
+- [x] Set up Schemas
+- [x] Set up Links
+- [x] Connect to database
+- [x] Have 2 successful servers
+- [x] Create Home page
+- [x] Create About Me page
+- [x] Create Contact Me page
+- [x] Style with CSS
+- [x] Create country information
+- [x] Create contact submission form
 
 ---
 
@@ -69,3 +63,6 @@ Welcome to my Travel Blog! You will be able to view 6 of my favorite cities I've
 - [Amsterdam image](<https://www.travelandleisure.com/thmb/qI_QQdbY_6YNhxXNXGgeT3EhjkU=/1200x1200/smart/filters:no_upscale()/amsterdam-nl-AMSTERDAMTG0521-6d2bfaac29704667a950bcf219680640.jpg>)
 
 ### **_Future Developments_**
+
+- Connect to instagram
+- Create more blogposts
